@@ -33,3 +33,5 @@ alias fversion="compgen -c | fzf | xargs -I {} bash -c '{} --version 2>/dev/null
 alias fpod="kubectl get pods -A --no-headers | fzf | awk '{print \$2,\$1}' | xargs -n 2 sh -c 'kubectl describe pod \$0 -n \$1'"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+
+complete -C /usr/bin/terraform terraform
