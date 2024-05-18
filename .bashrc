@@ -25,7 +25,10 @@ if [ -d ~/.bashrc.d ]; then
 fi
 
 unset rc
-
+# Source machine-specific configurations
+if [ -f "$HOME/.bashrc.local" ]; then
+  source "$HOME/.bashrc.local"
+fi
 
 alias fman="compgen -c | fzf | xargs man"
 alias fwhich="compgen -c | fzf | xargs which"
