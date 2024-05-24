@@ -37,5 +37,5 @@ alias fpod="kubectl get pods -A --no-headers | fzf | awk '{print \$2,\$1}' | xar
 alias frmpod="kubectl get pods -A --no-headers | fzf | awk '{print \$2,\$1}' | xargs -n 2 sh -c 'kubectl delete pod \$0 -n \$1'"
 
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
-
+git config --global alias.pretty-log "log --graph --oneline --decorate"
 complete -C /usr/bin/terraform terraform
